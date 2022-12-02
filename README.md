@@ -1,15 +1,20 @@
 # Disorderly Conductor
 
+> "if you have to pay for it, it sucks, but _never steal_" - Rowdy
+
 This is the computer I build for my bikes. There will be many, and no two are the same. I may start doing commissioned DCs if people are interested.
 
 ## ideas
 
-Awesome list (but not really, but really!) of ideas for the Disorderly Conductor.
+Awesome list (but not really, but really!) of ideas for the Disorderly Conductor. `#todo: make awesome list for this`
 
 ### in general
 
 - old rpi (has to be the crappiest / smallest / cheapest rpi, or some similar system on chip equivalent)
 - leverage tF out of i2c
+    - add uarts and adcs and all the stuff that the pi is missing
+    - add esp8266's. Yes, I know they have wifi, but if you use i2c as a communication channel, you free up the wifi for wifi things :-) 
+    - add esp01s, arduinos, gps's via i2c 2 uart, dacs for audio (if the rpi i2c supports)
 - leverage tF out of usb
 - UARTs and sensors for days
 - so many wires, and not wires we'd expect. get real janky with it
@@ -17,6 +22,8 @@ Awesome list (but not really, but really!) of ideas for the Disorderly Conductor
     - rj11 (old phone wire? Hell Yeah!)
     - phono cable (like 1/4")
     - RCA cable
+    - speaker wire
+    - lamp cord
     - basically put i2c or uart on every type of commonly available wire, just to show that it can be done
     - waterproof it with common stuff that wouldn't be first choice
         - petroleum jelly
@@ -28,6 +35,9 @@ Awesome list (but not really, but really!) of ideas for the Disorderly Conductor
     - phone + pi = power + pifm with a wire (+ gps, etc)
     - communication with NO INTERNET
     - This is really a whole episode. A love letter to the modern handset.
+
+### power manglement
+- power everything with an off-bike battery, charge with bike battery. This leaves the system running when bike stuff is down, and some devices (here's looking at you esp32) can be put into low power mode to monitor the bike's battery and other environmental conditions around the bike.
 
 ## 'Disorderly Conductor'? Really guy?
 
